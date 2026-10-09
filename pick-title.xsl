@@ -15,9 +15,9 @@ xmlns:tei="http://www.tei-c.org/ns/1.0" version="2.0">
 <xsl:variable name="md" select="tokenize(.,', ')"/>
 <xsl:result-document href="./00-title.md">
 ---
-lang: sh
-title: <xsl:value-of select="."/>
-author: <xsl:value-of select="$md[1]"/>
+lang: sr
+title: "<xsl:value-of select="."/>"
+author: "<xsl:value-of select="$md[1]"/>"
 ---
 </xsl:result-document>
 </xsl:template>
