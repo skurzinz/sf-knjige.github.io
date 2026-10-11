@@ -12,7 +12,7 @@ do
 
 	sed -E -i'' -e "s#scrolling=auto##gi" -E -e 's#</?meta[^>]*?>##gi' -E -e 's#</?frame[^>]*?>##gi' index0.html; # fix the index0.html files to be XML well-formed
 	ant; # run the XSL transformation from build.xml
-	pandoc -o ${PWD##*/}.epub ./md/*.md;
+	pandoc --epub-cover-image=../../images/${PWD##*/}.jpg -o ${PWD##*/}.epub ./md/*.md;
 	# rm -rf md;
 	rm build.xml
 
